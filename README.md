@@ -1,4 +1,4 @@
-### 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰-𝐁𝐨𝐭  (vite + react + gemini API)
+# 𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰-𝐁𝐨𝐭  (vite + react + gemini API)
 
 A single-page mock–interview app:
 
@@ -7,7 +7,7 @@ A single-page mock–interview app:
 * 📝 Auto-scrolling chat window records the dialogue.
 * 🏁 After the 6th reply the bot outputs a strengths / weaknesses summary and a hire / no-hire verdict.
 
-The UI and codebase are intentionally minimal (no TypeScript or CSS frameworks) so you can extend them however you like.
+The UI and codebase are intentionally minimal to extend them however you like.
 
 ---
 
@@ -29,7 +29,7 @@ The UI and codebase are intentionally minimal (no TypeScript or CSS frameworks) 
 ---
 
 ## Demo gif
-*(add a short screen-capture here if you like)*
+![demo](assets/screenshot.png)
 
 ---
 
@@ -40,7 +40,6 @@ The UI and codebase are intentionally minimal (no TypeScript or CSS frameworks) 
 | **AI**               | Google Gemini 1.5-pro (free tier)<br>One-question-at-a-time flow, dynamic follow-ups, final review |
 | **UX**               | Auto-scrolling chat, inputs stay disabled until interview starts and after final review            |
 | **Clean code**       | React 18 function components, custom hook for business logic, SDK wrapper for API calls            |
-| **Rate-limit aware** | Retries 429 responses using Google-recommended `retryDelay`                                        |
 
 ---
 
@@ -81,7 +80,7 @@ npm run dev
 # open http://localhost:5173
 ```
 
-> **Tip:** `.env.local` is already git-ignored; every collaborator adds their own.
+> **Tip:** `.env.local` is git-ignored; every collaborator must add their own.
 
 ---
 
@@ -118,6 +117,8 @@ See the [Gemini API console](https://ai.google.dev) → *API keys*.
 
 ```
 interview-bot/
+├─ assets/
+│  ├─ screenshot.png/
 ├─ src/
 │  ├─ api/
 │  │  └─ gemini.js           # SDK wrapper + retry logic
